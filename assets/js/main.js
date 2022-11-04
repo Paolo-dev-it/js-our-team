@@ -49,8 +49,21 @@ const team = [
 ];
 
 
-    for(let i = 0; i <= team.length; i++){ //Ciclo per far vedere in console ogni singolo membro del team
+    for(let i = 0; i < team.length; i++){ //Ciclo per far vedere in console ogni singolo membro del team
+        
+        let currentCard = team[i];
         console.log(team[i]);
+        document.getElementById("cards").innerHTML += `
+        <div class="card" style="width: 18rem;">
+            <img src= assets/img/${currentCard.image} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${currentCard.name}</h5>
+                <p class="card-text">${currentCard.role}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>`
     }
 
-    console.log(team);//ConsoleLog per far vedere in console ogni membro del team ma generico
+    //console.log(currentCard); ConsoleLog per far vedere in console ogni membro del team ma generico
+
+   
