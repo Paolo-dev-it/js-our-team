@@ -54,14 +54,16 @@ const team = [
         let currentCard = team[i];
         console.log(team[i]);
         document.getElementById("cards").innerHTML += `
-        <div class="card" style="width: 18rem;">
-            <img src= assets/img/${currentCard.image} class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">${currentCard.name}</h5>
-                <p class="card-text">${currentCard.role}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-4 d-flex align-items-center justify-content-center rounded ">
+            <div class="card align-items-center shadow" style="width: 18rem;">
+                <img src= assets/img/${currentCard.image} class="card-img-top" alt="...">
+                <div class="card-body p-2">
+                    <h5 class="card-title">${currentCard.name}</h5>
+                    <p class="card-text">${currentCard.role}</p>
+                </div>
             </div>
         </div>`
+        
     }
 
     //console.log(currentCard); ConsoleLog per far vedere in console ogni membro del team ma generico
